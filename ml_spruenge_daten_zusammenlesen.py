@@ -29,12 +29,12 @@ def daten_zusammenlesen (folder_path, text_widget):
             df = pd.read_excel(file_path, header=None)
 
             # Extrahiere die Werte für die neuen Spalten
-            code_value = df.iloc[8, 1]  # B9
-            nachname_value = df.iloc[1, 1] # B2
+            code_value = df.iloc[6, 1]  # B7
+            nachname_value = df.iloc[1, 1]  # B2
             vorname_value = df.iloc[2, 1]  # B3
             geschlecht_value = df.iloc[3, 1]  # B4
-            groeße_value = df.iloc[6, 1]  # B7
-            gewicht_value = df.iloc[5, 1]  # B6
+            groeße_value = df.iloc[5, 1]  # B6
+            gewicht_value = df.iloc[4, 1]  # B5
             dominantes_bein_value = df.iloc[7, 1]  # B8
 
             # Extrahiere die Daten aus den gewünschten Bereichen:
@@ -129,8 +129,6 @@ def daten_zusammenlesen (folder_path, text_widget):
                             f"Die Tabelle wurde erfolgreich erstellt und gespeichert unter: {folder_path}")
 
 
-
-
 # GUI-Setup
 def ordner_auswaehlen(entry):
     folder_selected = filedialog.askdirectory()
@@ -177,6 +175,5 @@ def main():
 # Hauptprogramm starten
 if __name__ == "__main__":
     main()
-
 
 
